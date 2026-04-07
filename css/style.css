@@ -497,18 +497,107 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; color: var(
 }
 
 @media (max-width: 768px) {
+  html { -webkit-tap-highlight-color: rgba(91,123,111,0.15); }
+  body { font-size: 16px; }
   .section { padding: 64px 0; }
-  .nav { position: fixed; top: 0; right: -100%; width: 80%; max-width: 320px; height: 100vh; background: var(--cor-fundo); padding: 100px 32px 32px; transition: right var(--transition); box-shadow: var(--shadow-lg); }
+  .container { padding: 0 20px; }
+
+  /* Navegação mobile — drawer lateral com overlay */
+  .nav {
+    position: fixed;
+    top: 0; right: -100%;
+    width: 82%; max-width: 320px;
+    height: 100vh; height: 100dvh;
+    background: var(--cor-fundo);
+    padding: 100px 32px 40px;
+    transition: right var(--transition);
+    box-shadow: var(--shadow-lg);
+    overflow-y: auto;
+    z-index: 999;
+  }
   .nav.active { right: 0; }
-  .nav__list { flex-direction: column; gap: 24px; }
-  .nav__list a { color: var(--cor-texto) !important; font-size: 18px; }
-  .hamburger { display: flex; }
+  .nav__list { flex-direction: column; gap: 8px; }
+  .nav__list li { border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .nav__list a {
+    color: var(--cor-texto) !important;
+    font-size: 17px;
+    display: block;
+    padding: 16px 4px;
+    min-height: 48px;
+  }
+  .hamburger { display: flex; padding: 12px; min-width: 44px; min-height: 44px; align-items: center; }
   .header__cta { display: none; }
-  .servicos__grid { grid-template-columns: 1fr; }
-  .timeline { grid-template-columns: 1fr; }
-  .produtos__grid { grid-template-columns: 1fr 1fr; }
-  .contato__info { grid-template-columns: 1fr; }
-  .footer__grid { grid-template-columns: 1fr; }
-  .hero__content { padding: 100px 24px 60px; }
-  .hero__ctas .btn { width: 100%; }
+
+  /* Backdrop quando menu aberto */
+  body.nav-open { overflow: hidden; }
+  body.nav-open::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: rgba(45,59,47,0.5);
+    backdrop-filter: blur(2px);
+    z-index: 998;
+  }
+
+  /* Hero mobile */
+  .hero { min-height: 100vh; min-height: 100dvh; }
+  .hero__content { padding: 110px 20px 80px; text-align: left; }
+  .hero__title { font-size: clamp(28px, 8vw, 40px); line-height: 1.15; }
+  .hero__text { font-size: 16px; }
+  .hero__ctas { flex-direction: column; align-items: stretch; gap: 12px; }
+  .hero__ctas .btn { width: 100%; min-height: 52px; }
+  .hero__tags { gap: 8px; }
+  .hero__scroll { display: none; }
+
+  /* Reduz peso das animações ambientes em mobile */
+  .ambient-shape { filter: blur(20px); opacity: 0.7; }
+  .ambient-shape--3 { display: none; }
+  .sobre::after, .produtos::after, .avaliacao::after { width: 260px; height: 260px; }
+
+  /* Layouts */
+  .servicos__grid { grid-template-columns: 1fr; gap: 20px; }
+  .servico-card { padding: 28px 24px; }
+  .timeline { grid-template-columns: 1fr; gap: 24px; }
+  .timeline__step { padding: 28px 22px; }
+  .produtos__grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .produto-card { padding: 14px; }
+  .produto-card h3 { font-size: 14px; }
+  .produto-card span { font-size: 12px; }
+  .contato__info { grid-template-columns: 1fr; gap: 16px; }
+  .footer__grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+
+  /* Sobre */
+  .sobre__foto { max-width: 280px; margin: 0 auto; }
+  .sobre__cards { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .cred-card { padding: 22px 14px; }
+  .cred-card h3 { font-size: 14px; }
+  .cred-card p { font-size: 13px; }
+
+  /* Touch targets ≥ 44px */
+  .btn { min-height: 48px; padding: 14px 24px; }
+  .btn--lg { min-height: 56px; }
+
+  /* WhatsApp float não cobrir conteúdo */
+  .wa-float { width: 56px; height: 56px; bottom: 18px; right: 18px; }
+  body { padding-bottom: 0; }
+  .footer { padding-bottom: 90px; }
+
+  /* Header mais compacto */
+  .header { padding: 12px 0; }
+  .header__logo-name { font-size: 18px; }
+  .header__logo-sub { font-size: 10px; }
+  .header__logo-img { width: 40px; height: 40px; }
+
+  /* FENATE */
+  .fenate { margin-top: 40px; padding: 24px 20px; }
+  .fenate__img { width: 110px; }
+
+  /* Tipografia geral */
+  .section__title { font-size: clamp(24px, 6vw, 32px); }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 380px) {
+  .produtos__grid { grid-template-columns: 1fr; }
+  .sobre__cards { grid-template-columns: 1fr; }
+  .hero__title { font-size: 26px; }
 }

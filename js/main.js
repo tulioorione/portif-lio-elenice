@@ -10,16 +10,24 @@ onScroll();
 // ============ MENU MOBILE ============
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('nav');
+const closeMenu = () => {
+  nav.classList.remove('active');
+  hamburger.classList.remove('active');
+  hamburger.setAttribute('aria-expanded', 'false');
+  document.body.classList.remove('nav-open');
+};
 hamburger.addEventListener('click', () => {
   const open = nav.classList.toggle('active');
   hamburger.classList.toggle('active', open);
   hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  document.body.classList.toggle('nav-open', open);
 });
-nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  nav.classList.remove('active');
-  hamburger.classList.remove('active');
-  hamburger.setAttribute('aria-expanded', 'false');
-}));
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+// Fecha ao clicar no backdrop ou apertar Esc
+document.addEventListener('click', (e) => {
+  if (nav.classList.contains('active') && !nav.contains(e.target) && !hamburger.contains(e.target)) closeMenu();
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
 
 // ============ REVEAL ON SCROLL ============
 const io = new IntersectionObserver((entries) => {
@@ -34,7 +42,8 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
 // ============ PARALLAX AMBIENTE (HERO) ============
 const ambientShapes = document.querySelectorAll('.ambient-shape');
-if (ambientShapes.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+if (ambientShapes.length && !isTouch && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   let mouseX = 0, mouseY = 0, currX = 0, currY = 0;
   document.addEventListener('mousemove', (e) => {
     mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
