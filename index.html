@@ -41,7 +41,10 @@
         </ul>
       </nav>
 
-      <a class="btn btn--whatsapp header__cta" href="https://wa.me/5531980113229?text=Olá%20Elenice,%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener">📱 Agendar</a>
+      <a class="btn btn--whatsapp header__cta" href="https://wa.me/5531980113229?text=Olá%20Elenice,%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+        Agendar
+      </a>
 
       <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -52,6 +55,11 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="inicio">
     <div class="hero__overlay"></div>
+    <div class="hero__ambient" aria-hidden="true">
+      <svg class="ambient-shape ambient-shape--1" viewBox="0 0 200 200"><path fill="rgba(123,159,126,0.18)" d="M44,-58.4C56.4,-49.7,65.5,-35.6,69.8,-20.1C74,-4.6,73.5,12.3,66.5,25.8C59.5,39.2,46.1,49.3,31.4,57.1C16.6,64.9,0.4,70.4,-15.6,68.6C-31.6,66.8,-47.4,57.6,-57.5,44C-67.6,30.4,-72,12.3,-69.7,-4.6C-67.4,-21.5,-58.4,-37.3,-45.6,-46.7C-32.7,-56.1,-16.4,-59.1,-0.4,-58.6C15.5,-58.1,31,-67,44,-58.4Z" transform="translate(100 100)"/></svg>
+      <svg class="ambient-shape ambient-shape--2" viewBox="0 0 200 200"><path fill="rgba(197,184,130,0.12)" d="M38.8,-49.4C49.5,-40.8,56.6,-27.7,60.7,-13.4C64.8,0.9,65.9,16.4,59.4,28.4C52.9,40.5,38.7,49.1,23.5,55.8C8.2,62.5,-8.1,67.4,-22.4,63.6C-36.7,59.8,-49.1,47.4,-57.6,32.7C-66,18,-70.6,1,-67,-13.7C-63.4,-28.4,-51.6,-40.9,-38.4,-49.5C-25.2,-58.1,-10.6,-62.8,2.4,-65.7C15.4,-68.7,28.1,-58,38.8,-49.4Z" transform="translate(100 100)"/></svg>
+      <svg class="ambient-shape ambient-shape--3" viewBox="0 0 200 200"><path fill="rgba(255,255,255,0.05)" d="M41,-55.6C52.7,-47,61.4,-34.6,65.5,-20.7C69.6,-6.9,69,8.4,63.4,21.4C57.7,34.4,46.9,45.1,34.1,52.6C21.4,60.1,6.7,64.5,-8.6,64.4C-23.9,64.3,-39.7,59.7,-50.6,49.7C-61.4,39.7,-67.1,24.3,-67.5,9C-67.9,-6.3,-63,-21.5,-54.3,-33.3C-45.6,-45.1,-33.1,-53.6,-19.8,-60.5C-6.5,-67.4,7.6,-72.7,20.4,-69.6C33.2,-66.5,29.3,-64.2,41,-55.6Z" transform="translate(100 100)"/></svg>
+    </div>
     <div class="container hero__content">
       <span class="badge badge--light reveal">Terapia Integrativa • Apoio Emocional</span>
       <h1 class="hero__title reveal">Você não precisa enfrentar<br />isso sozinho(a)</h1>
@@ -64,10 +72,18 @@
         <a href="https://wa.me/5531980113229?text=Olá%20Elenice,%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" class="btn btn--ghost">Fale comigo</a>
       </div>
       <div class="hero__tags reveal">
-        <span class="tag tag--online">🌐 Atendimento Online</span>
-        <span class="tag tag--presencial">📍 Mariana-MG</span>
+        <span class="tag tag--online">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+          Atendimento Online
+        </span>
+        <span class="tag tag--presencial">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-7.5-7-12a7 7 0 1114 0c0 4.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          Mariana-MG
+        </span>
       </div>
-      <a href="#sobre" class="hero__scroll" aria-label="Rolar para baixo">▼</a>
+      <a href="#sobre" class="hero__scroll" aria-label="Rolar para baixo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
     </div>
   </section>
 
@@ -94,10 +110,30 @@
     </div>
 
     <div class="container sobre__cards">
-      <div class="cred-card reveal"><div class="cred-card__icon">🌿</div><h3>Terapeuta Integrativa</h3><p>Abordagem que cuida do ser como um todo</p></div>
-      <div class="cred-card reveal"><div class="cred-card__icon">💛</div><h3>Conselheira Emocional</h3><p>Escuta ativa e orientação acolhedora</p></div>
-      <div class="cred-card reveal"><div class="cred-card__icon">📚</div><h3>Educadora</h3><p>Formação e conscientização em saúde</p></div>
-      <div class="cred-card reveal"><div class="cred-card__icon">🤝</div><h3>Coordenadora em Dep. Química</h3><p>Experiência com famílias e dependentes</p></div>
+      <div class="cred-card reveal">
+        <div class="cred-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22c0-7 4-12 10-13C21 16 16 22 12 22z"/><path d="M12 22c0-7-4-12-10-13C3 16 8 22 12 22z"/><path d="M12 22V9"/></svg>
+        </div>
+        <h3>Terapeuta Integrativa</h3><p>Abordagem que cuida do ser como um todo</p>
+      </div>
+      <div class="cred-card reveal">
+        <div class="cred-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 6.6a5.4 5.4 0 00-7.6 0L12 7.8l-1.2-1.2a5.4 5.4 0 00-7.6 7.6L12 22.6l8.8-8.4a5.4 5.4 0 000-7.6z"/></svg>
+        </div>
+        <h3>Conselheira Emocional</h3><p>Escuta ativa e orientação acolhedora</p>
+      </div>
+      <div class="cred-card reveal">
+        <div class="cred-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-6a3 3 0 00-3 3v13a2 2 0 012-2h7z"/></svg>
+        </div>
+        <h3>Educadora</h3><p>Formação e conscientização em saúde</p>
+      </div>
+      <div class="cred-card reveal">
+        <div class="cred-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M14.5 20c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5"/></svg>
+        </div>
+        <h3>Coordenadora em Dep. Química</h3><p>Experiência com famílias e dependentes</p>
+      </div>
     </div>
 
     <div class="container fenate reveal">
@@ -118,16 +154,20 @@
 
       <div class="servicos__grid">
         <article class="servico-card reveal">
-          <span class="badge badge--online">🌐 Online</span>
-          <div class="servico-card__icon">🌱</div>
+          <span class="badge badge--online">Online</span>
+          <div class="servico-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4-3-7-6-7-11a4 4 0 017-2.6A4 4 0 0119 10c0 5-3 8-7 11z"/></svg>
+          </div>
           <h3>Terapia Emocional</h3>
           <p>Ansiedade, conflitos emocionais e busca por equilíbrio pessoal.</p>
           <a class="btn btn--outline" target="_blank" rel="noopener" href="https://wa.me/5531980113229?text=Olá%20Elenice,%20tenho%20interesse%20na%20Terapia%20Emocional.%20Podemos%20conversar?">Agendar sessão</a>
         </article>
 
         <article class="servico-card reveal">
-          <span class="badge badge--online">🌐 Online</span>
-          <div class="servico-card__icon">🔗</div>
+          <span class="badge badge--online">Online</span>
+          <div class="servico-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a4 4 0 015.7 0l3 3a4 4 0 11-5.7 5.7L12 20.4"/><path d="M14 11a4 4 0 01-5.7 0l-3-3a4 4 0 115.7-5.7L12 3.6"/></svg>
+          </div>
           <h3>Terapia em Adições</h3>
           <p>Apoio emocional e acompanhamento terapêutico para quem enfrenta adições.</p>
           <a class="btn btn--outline" target="_blank" rel="noopener" href="https://wa.me/5531980113229?text=Olá%20Elenice,%20gostaria%20de%20saber%20mais%20sobre%20a%20Terapia%20em%20Adições.">Agendar sessão</a>
@@ -135,18 +175,22 @@
 
         <article class="servico-card servico-card--destaque reveal">
           <div class="servico-card__badges">
-            <span class="badge badge--online">🌐 Online</span>
-            <span class="badge badge--gold">⭐ Especialidade</span>
+            <span class="badge badge--online">Online</span>
+            <span class="badge badge--gold">Especialidade</span>
           </div>
-          <div class="servico-card__icon">👨‍👩‍👧</div>
+          <div class="servico-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><circle cx="6" cy="10" r="2"/><path d="M2 20c0-2.8 2.2-5 5-5s5 2.2 5 5"/><path d="M11 20c0-3 2.5-5.5 5.5-5.5S22 17 22 20"/></svg>
+          </div>
           <h3>Apoio a Familiares</h3>
           <p>Orientação, suporte emocional e ajuda com codependência para famílias.</p>
           <a class="btn btn--primary" target="_blank" rel="noopener" href="https://wa.me/5531980113229?text=Olá%20Elenice,%20preciso%20de%20orientação%20sobre%20apoio%20a%20familiares.">Agendar sessão</a>
         </article>
 
         <article class="servico-card reveal">
-          <span class="badge badge--presencial">📍 Presencial — Mariana/MG</span>
-          <div class="servico-card__icon">⚖️</div>
+          <span class="badge badge--presencial">Presencial — Mariana/MG</span>
+          <div class="servico-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
           <h3>Avaliação Terapêutica Integrativa</h3>
           <p>Análise energética e observação de desequilíbrios. Atendimento presencial.</p>
           <a class="btn btn--outline" target="_blank" rel="noopener" href="https://wa.me/5531980113229?text=Olá%20Elenice,%20gostaria%20de%20agendar%20uma%20Avaliação%20Terapêutica%20Integrativa%20em%20Mariana.">Agendar avaliação</a>
@@ -160,7 +204,7 @@
     <div class="container">
       <span class="section__eyebrow center">Etapas do processo</span>
       <h2 class="section__title center">Avaliação Terapêutica Integrativa</h2>
-      <div class="badge-wrap center"><span class="badge badge--presencial">📍 Atendimento presencial — Mariana/MG</span></div>
+      <div class="badge-wrap center"><span class="badge badge--presencial">Atendimento presencial — Mariana/MG</span></div>
 
       <div class="timeline">
         <div class="timeline__step reveal">
@@ -185,7 +229,7 @@
       </div>
 
       <p class="disclaimer">
-        ⚠️ Esta avaliação não substitui consulta médica. Trata-se de uma
+        Esta avaliação não substitui consulta médica. Trata-se de uma
         abordagem complementar voltada ao equilíbrio e bem-estar.
       </p>
     </div>
@@ -269,7 +313,10 @@
       </div>
 
       <div class="center" style="margin-top:40px">
-        <a class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener" href="https://wa.me/5531980113229?text=Olá%20Elenice,%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar.">💬 Falar no WhatsApp</a>
+        <a class="btn btn--whatsapp btn--lg" target="_blank" rel="noopener" href="https://wa.me/5531980113229?text=Olá%20Elenice,%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar.">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1c-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5s0-.4 0-.5-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5 1.8.7 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 00-8.5 15.3L2 22l4.8-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
+          Falar no WhatsApp
+        </a>
       </div>
     </div>
   </section>
@@ -307,13 +354,15 @@
     </p>
 
     <p class="footer__copy">
-      © 2026 Elenice Ramos — Terapia Integrativa · Desenvolvido por Tulio Orione 💚
+      © 2026 Elenice Ramos — Terapia Integrativa · Desenvolvido por Tulio Orione
     </p>
   </footer>
 
   <!-- ============ WHATSAPP FLUTUANTE ============ -->
   <a class="wa-float" target="_blank" rel="noopener" href="https://wa.me/5531980113229?text=Olá%20Elenice,%20vim%20pelo%20seu%20site!" aria-label="Fale comigo no WhatsApp">
-    <span class="wa-float__icon">💬</span>
+    <span class="wa-float__icon">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1c-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5s0-.4 0-.5-.7-1.7-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5 1.8.7 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 00-8.5 15.3L2 22l4.8-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
+    </span>
     <span class="wa-float__tooltip">Fale comigo no WhatsApp</span>
   </a>
 

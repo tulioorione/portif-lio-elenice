@@ -13,7 +13,7 @@ const nav = document.getElementById('nav');
 hamburger.addEventListener('click', () => {
   const open = nav.classList.toggle('active');
   hamburger.classList.toggle('active', open);
-  hamburger.setAttribute('aria-expanded', open);
+  hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
 nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   nav.classList.remove('active');
@@ -31,6 +31,26 @@ const io = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// ============ PARALLAX AMBIENTE (HERO) ============
+const ambientShapes = document.querySelectorAll('.ambient-shape');
+if (ambientShapes.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  let mouseX = 0, mouseY = 0, currX = 0, currY = 0;
+  document.addEventListener('mousemove', (e) => {
+    mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
+    mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+  });
+  const tick = () => {
+    currX += (mouseX - currX) * 0.05;
+    currY += (mouseY - currY) * 0.05;
+    ambientShapes.forEach((s, i) => {
+      const depth = (i + 1) * 12;
+      s.style.translate = `${currX * depth}px ${currY * depth}px`;
+    });
+    requestAnimationFrame(tick);
+  };
+  tick();
+}
 
 // ============ CARROSSEL DEPOIMENTOS ============
 const carousel = document.getElementById('carousel');
