@@ -112,7 +112,10 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; color: var(
 }
 .header.scrolled { background: rgba(250,247,242,0.92); backdrop-filter: blur(10px); box-shadow: var(--shadow-sm); }
 .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.header__logo { display: flex; flex-direction: column; line-height: 1.1; }
+.header__logo { display: flex; align-items: center; gap: 12px; line-height: 1.1; }
+.header__logo-img { width: 46px; height: 46px; object-fit: contain; border-radius: 50%; background: rgba(255,255,255,0.85); padding: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+.header.scrolled .header__logo-img { background: #fff; }
+.header__logo-text { display: flex; flex-direction: column; line-height: 1.1; }
 .header__logo-name { font-family: var(--font-display); font-size: 22px; color: var(--cor-primaria-escura); font-weight: 700; }
 .header__logo-sub { font-family: var(--font-ui); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--cor-secundaria); }
 .header:not(.scrolled) .header__logo-name { color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.3); }
@@ -176,6 +179,15 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; color: var(
 /* ============ SOBRE ============ */
 .sobre { background: var(--cor-fundo-alt); }
 .sobre__grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: center; }
+.sobre__foto {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+  overflow: hidden;
+  background: var(--cor-fundo-alt);
+  box-shadow: var(--shadow-lg);
+}
+.sobre__foto-img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .sobre__foto-placeholder {
   aspect-ratio: 4/5;
   background: linear-gradient(135deg, #C8A96E 0%, #5B7B6F 100%);
@@ -183,6 +195,26 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; color: var(
   display: flex; align-items: center; justify-content: center;
   color: #fff; font-family: var(--font-ui); text-align: center;
   box-shadow: var(--shadow-lg);
+}
+
+/* FENATE */
+.fenate {
+  margin-top: 64px;
+  background: #fff;
+  border: 1px solid var(--cor-secundaria);
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  box-shadow: var(--shadow-sm);
+}
+.fenate__img { width: 140px; height: auto; object-fit: contain; flex-shrink: 0; border-radius: 8px; }
+.fenate__texto .section__eyebrow { margin-bottom: 6px; }
+.fenate__texto h3 { font-family: var(--font-display); font-size: 22px; color: var(--cor-primaria-escura); margin-bottom: 10px; }
+.fenate__texto p { font-size: 15px; color: var(--cor-texto-suave); margin: 0; }
+@media (max-width: 768px) {
+  .fenate { flex-direction: column; text-align: center; padding: 28px 24px; }
 }
 .sobre__texto p { margin-bottom: 18px; color: var(--cor-texto-suave); }
 
